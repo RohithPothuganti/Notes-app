@@ -1,0 +1,26 @@
+{
+  "name": "notes-app",
+  "version": "1.0.0",
+  "description": "MERN Stack Note Making Application",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install --prefix Backend && npm install --prefix Frontend",
+    "dev": "concurrently \"npm run dev --prefix Backend\" \"npm run dev --prefix Frontend\"",
+    "start": "node Backend/src/server.js",
+    "build": "npm run install-all && npm run build --prefix Frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RohithPothuganti/Notes-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RohithPothuganti/Notes-app/issues"
+  },
+  "homepage": "https://github.com/RohithPothuganti/Notes-app/#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
