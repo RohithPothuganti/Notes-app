@@ -22,5 +22,8 @@
   "homepage": "https://github.com/RohithPothuganti/Notes-app/#readme",
   "devDependencies": {
     "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5"
   }
 }

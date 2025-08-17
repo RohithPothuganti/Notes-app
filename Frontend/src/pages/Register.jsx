@@ -14,7 +14,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await api.post('/auth/register', formData);
+      await api.post('/api/auth/register', formData);
       toast.success('Registration successful! Please log in.');
       navigate('/login');
     } catch (error) {
