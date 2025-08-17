@@ -15,8 +15,7 @@ const __dirname = path.resolve(path.dirname(''));
 app.use(express.json());
 
 const allowedOrigins = [
-  'http://localhost:5173', 
-  'notes-app-delta-opal-24.vercel.app' 
+  'http://localhost:5173'
 ];
 
 app.use(cors({
