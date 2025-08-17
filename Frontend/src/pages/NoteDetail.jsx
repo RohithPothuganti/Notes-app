@@ -16,7 +16,7 @@ export default function NoteDetail() {
     const singleFetcher = async () => {
       try {
         setloading(true);
-        const response = await api.get(`/notes/${id}`);
+        const response = await api.get(`/api/notes/${id}`);
         const data = response.data;
         settitle(data.title);
         setContent(data.content);
@@ -37,7 +37,7 @@ export default function NoteDetail() {
     }
     setsaving(true);
     try {
-      await api.put(`/notes/${id}`, { title, content });
+      await api.put(`/api/notes/${id}`, { title, content });
       toast.success("Edited Note Successfully");
       navigate("/");
     } catch (e) {
@@ -50,7 +50,7 @@ export default function NoteDetail() {
   const handleDelete = async (e) => {
     e.preventDefault();
     try {
-      await api.delete(`/notes/${id}`);
+      await api.delete(`/api/notes/${id}`);
       toast.success("Note Deleted Successfully");
       navigate('/');
     } catch (e) {

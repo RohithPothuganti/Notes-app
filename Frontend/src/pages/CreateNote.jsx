@@ -18,7 +18,7 @@ export default function CreateNote() {
     }
     setloading(true);
     try {
-      await api.post('/notes', { title, content });
+      await api.post('/api/notes', { title, content });
       toast.success("Added Note Successfully");
       navigate("/");
     } catch (e) {

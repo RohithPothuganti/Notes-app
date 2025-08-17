@@ -13,7 +13,7 @@ export default function Home() {
     const fetchNotes = async () => {
       try {
         setLoading(true);
-        const response = await api.get("/notes");
+        const response = await api.get("/api/notes");
         setNotes(response.data);
       } catch (err) {
         toast.error("Failed to load notes");
